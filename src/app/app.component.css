@@ -1,0 +1,18 @@
+.banner {
+    height: 40px;
+}
+
+.sidebar{    
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+    position: absolute;
+}
+
+.frame{
+    float: right;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(144, 192, 201);
+
+}

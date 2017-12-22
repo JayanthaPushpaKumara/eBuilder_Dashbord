@@ -1,0 +1,12 @@
+.wrapper {
+    line-height: 40px;
+    text-align: center;
+    background-color: brown;
+}
+
+p {
+    color: rgb(10, 253, 253);
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}

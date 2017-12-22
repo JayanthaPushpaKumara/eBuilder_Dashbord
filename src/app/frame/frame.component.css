@@ -1,0 +1,19 @@
+.dashlat {
+    height: 350px;
+    width: 350px;
+    background-color: aliceblue;
+    margin: 0em;
+}
+
+#lineChart{
+    position: absolute;
+}
+
+#pieChart{    
+    position: absolute;
+    margin-left: 365px;
+}
+
+#barChart{
+    float: right;
+}
