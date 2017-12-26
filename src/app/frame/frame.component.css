@@ -2,6 +2,7 @@
     height: 350px;
     width: 350px;
     background-color: aliceblue;
+    border:1px solid #000000;
     margin: 0em;
 }
 
