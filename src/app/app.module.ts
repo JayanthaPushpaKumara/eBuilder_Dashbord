@@ -10,8 +10,6 @@ import { LineChartComponent } from './frame/line-chart/line-chart.component';
 import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
 import { BarChartComponent } from './frame/bar-chart/bar-chart.component';
 
-import { TableComponent } from './frame/table/table.component';
-
 
 @NgModule({
   declarations: [
@@ -21,9 +19,7 @@ import { TableComponent } from './frame/table/table.component';
     FrameComponent,
     LineChartComponent,
     PieChartComponent,
-    BarChartComponent,
-    
-    TableComponent
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

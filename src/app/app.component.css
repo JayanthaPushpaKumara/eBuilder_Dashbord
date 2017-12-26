@@ -1,17 +1,18 @@
 .banner {
-    background-color: rgb(15, 14, 15);
+    height: 40px;
 }
 
-#nav{    
-   
-    background-color: rgb(66, 64, 68);
-    height:auto;
+.sidebar{    
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+    position: absolute;
 }
 
-#maincont{
-    padding-top: .5cm;
-    padding-bottom: .5cm;
-    padding-right: .5cm;
-    padding-left: .5cm;
-    background-color: rgb(66, 64, 68);
+.frame{
+    float: right;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(144, 192, 201);
+
 }
