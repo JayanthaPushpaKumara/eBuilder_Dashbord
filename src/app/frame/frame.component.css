@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-.dashlat {
-    height: 350px;
-    width: 350px;
-    background-color: aliceblue;
-    border:1px solid #000000;
-    margin: 0em;
-}
-=======
-
->>>>>>> a44e0591a913c15c3723ff72afa9fbacd644e63f
 
 #lineChart{
     position: absolute;
@@ -21,7 +10,6 @@
 
 #barChart{
     float: right;
-}}
 }
 
 
