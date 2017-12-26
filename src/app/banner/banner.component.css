@@ -1,12 +1,14 @@
 .wrapper {
-    line-height: 40px;
-    text-align: center;
-    background-color: brown;
+    line-height: 70px;
+    text-align: left;
+    background-color: rgb(15, 14, 15);
+    height: 2cm;
 }
 
 p {
-    color: rgb(10, 253, 253);
+    color: rgb(149, 160, 160);
     margin-top: auto;
     margin-bottom: auto;
-    text-align: center;
+    text-align: left;
+    font-size: 1cm; 
 }
