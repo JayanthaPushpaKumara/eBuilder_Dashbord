@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { ChartModule } from 'angular2-chartjs';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
 import { BarChartComponent } from './frame/bar-chart/bar-chart.component';
 
 import { TableComponent } from './frame/table/table.component';
+import { Pagination}   from './frame/table/app.paginationComponent';
 
 
 @NgModule({
@@ -23,13 +25,15 @@ import { TableComponent } from './frame/table/table.component';
     PieChartComponent,
     BarChartComponent,
     
-    TableComponent
+    TableComponent,
+    Pagination
   ],
   imports: [
     BrowserModule,
-    ChartModule
+    ChartModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,Pagination]
 })
 export class AppModule { }

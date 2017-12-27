@@ -61,9 +61,8 @@ export class LineChartComponent implements OnInit {
             },
             legend: {
                 labels: {
-                    boxWidth: 20,
-                    fontColor: "#FFFFFF",
-                    padding:20
+                    boxWidth:50,
+                    fontColor: "#FFFFFF"
                 },
                 position: 'bottom',
                 fullWidth:true

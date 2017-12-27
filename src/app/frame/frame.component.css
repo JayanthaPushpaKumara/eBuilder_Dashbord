@@ -22,6 +22,15 @@
     
 }
 
+#table{
+    padding-top:10px; 
+    padding-bottom:0px; 
+    padding-left:10px; 
+    padding-right:10px; 
+    background-color: rgb(70, 65, 73);
+    
+    
+}
 
 #kpi{
     line-height: 70px;
@@ -37,8 +46,17 @@
 
 #cont{
     background-color: rgb(40, 38, 43);
-    padding-top:30px; 
-    padding-bottom:30px; 
-    padding-left:30px; 
-    padding-right:30px; 
+    padding-top:20px; 
+    padding-bottom:20px; 
+    padding-left:20px; 
+    padding-right:20px; 
+}
+
+.row{
+
+    padding-top:0px;
+    padding-bottom:0px; 
+    padding-left:0px; 
+    padding-right:0px; 
+
 }
