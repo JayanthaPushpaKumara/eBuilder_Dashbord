@@ -25,6 +25,7 @@ export class LineChartComponent implements OnInit {
                     pointHoverBorderWidth: 2,
                     borderColor: 'rgb(255, 99, 132)',
                     data: [100, 45, 40, 20, 20],
+                    padding:40,
                 },
                 {
                     label: "Dataset 2",
@@ -35,16 +36,18 @@ export class LineChartComponent implements OnInit {
                     pointHoverBorderColor: "red",
                     pointHoverBorderWidth: 2,
                     data: [34, 56, 50, 80, 40],
+                    padding:40,
                 },
                 {
                     label: "Dataset 3",
                     borderColor: 'blue',
-                    fill: true,
+                    fill: false,
                     lineTension: .4,
                     pointHoverBackgroundColor: "blue",
                     pointHoverBorderColor: "red",
                     pointHoverBorderWidth: 2,
                     data: [20, 35, 60, 40, 65],
+                    padding:40,
                 },
             ]
         };
@@ -52,18 +55,26 @@ export class LineChartComponent implements OnInit {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        fontColor: "#FFFFFF"
+                    }
+                }],
+                xAxes: [{
+                    ticks: { 
+                        fontColor: "#FFFFFF"
                     }
                 }]
             },
             legend: {
-                display: true,
                 labels: {
-                    fontColor: "Black"
+                    boxWidth:50,
+                    fontColor: "#FFFFFF"
                 },
                 position:'bottom'
             }
         }
+
+        
     
 
     }
