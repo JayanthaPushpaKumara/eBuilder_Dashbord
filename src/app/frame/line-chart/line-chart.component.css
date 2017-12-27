@@ -5,3 +5,7 @@
 #panelhead {
     background-color: rgb(41, 34, 40);
 }
+
+.panel-heading{
+    color: white;
+}
