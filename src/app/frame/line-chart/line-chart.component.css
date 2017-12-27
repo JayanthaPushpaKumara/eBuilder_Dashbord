@@ -1,4 +1,7 @@
-/*.lineChart {
-    margin-top: 5%;
+#dashhead {
+    background-color: rgb(15, 15, 15);
 }
-*/
+
+#panelhead {
+    background-color: rgb(41, 34, 40);
+}

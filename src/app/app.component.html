@@ -1,11 +1,14 @@
-<div class="banner">
-    <app-banner></app-banner>
-</div>
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <app-banner></app-banner>
+    </div>
 
-<div class="sidebar">
-    <app-sidebar></app-sidebar>
-</div>
-
-<div class="frame">
-    <app-frame></app-frame>
+    <div class="row" id="nav">
+        <div class="col-sm-2">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-sm-10" id="maincont">
+            <app-frame></app-frame>
+        </div>
+    </div>
 </div>

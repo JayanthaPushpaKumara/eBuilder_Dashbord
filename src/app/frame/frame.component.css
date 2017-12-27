@@ -1,11 +1,3 @@
-.dashlat {
-    height: 350px;
-    width: 350px;
-    background-color: aliceblue;
-    border:1px solid #000000;
-    margin: 0em;
-}
-
 #lineChart{
     position: absolute;
 }
@@ -17,4 +9,36 @@
 
 #barChart{
     float: right;
+}
+
+
+#dashlet{
+    padding-top:10px; 
+    padding-bottom:0px; 
+    padding-left:10px; 
+    padding-right:10px; 
+    background-color: rgb(70, 65, 73);
+    
+    
+}
+
+
+#kpi{
+    line-height: 70px;
+    height: 250px;
+    width: 1080px;
+    background-color: rgb(55, 52, 59);
+    border: 14mm;
+    border-color: black;
+    -ms-grid-row-align: center;
+    position: relative;
+}
+
+
+#cont{
+    background-color: rgb(40, 38, 43);
+    padding-top:30px; 
+    padding-bottom:30px; 
+    padding-left:30px; 
+    padding-right:30px; 
 }
