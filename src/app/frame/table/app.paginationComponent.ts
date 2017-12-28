@@ -9,8 +9,8 @@ import {productList} from './data';
 export class Pagination {
 
 	filteredItems : Product[];
-	pages : number = 4;
-    pageSize : number = 5;
+	pages : number = 3;
+    pageSize : number = 4;
 	pageNumber : number = 0;
 	currentIndex : number = 1;
 	items: Product[];
@@ -25,7 +25,7 @@ export class Pagination {
 	init(){
 			this.currentIndex = 1;
 			this.pageStart = 1;
-			this.pages = 4;
+			this.pages = 3;
 
 			this.pageNumber = parseInt(""+ (this.filteredItems.length / this.pageSize));
 			if(this.filteredItems.length % this.pageSize != 0){
