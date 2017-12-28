@@ -9,10 +9,11 @@ import { BannerComponent } from './banner/banner.component';
 import { FrameComponent } from './frame/frame.component';
 import { LineChartComponent } from './frame/line-chart/line-chart.component';
 import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
-import { BarChartComponent } from './frame/bar-chart/bar-chart.component';
 
 import { TableComponent } from './frame/table/table.component';
 import { Pagination}   from './frame/table/app.paginationComponent';
+import { MixedChartComponent } from './frame/mixed-chart/mixed-chart.component';
+import { LineChart2Component } from './frame/line-chart2/line-chart2.component';
 
 
 @NgModule({
@@ -22,11 +23,11 @@ import { Pagination}   from './frame/table/app.paginationComponent';
     BannerComponent,
     FrameComponent,
     LineChartComponent,
-    PieChartComponent,
-    BarChartComponent,
-    
+    PieChartComponent,    
     TableComponent,
-    Pagination
+    Pagination,
+    MixedChartComponent,
+    LineChart2Component
   ],
   imports: [
     BrowserModule,
