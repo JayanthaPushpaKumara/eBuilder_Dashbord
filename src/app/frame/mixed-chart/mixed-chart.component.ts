@@ -15,30 +15,30 @@ export class MixedChartComponent implements OnInit {
     new Chart(document.getElementById("mixed-chart"), {
       type: 'bar',
       data: {
-        labels: ["1900", "1950", "1999", "2050"],
+        labels: ["1850", "1900", "1950", "1999", "2050"],
         datasets: [{
           label: "Europe",
           type: "line",
           borderColor: "#8e5ea2",
-          data: [408, 547, 675, 734],
+          data: [100, 150, 300, 600, 700],
           fill: false
         }, {
           label: "Africa",
           type: "line",
           borderColor: "#3e95cd",
-          data: [133, 221, 783, 2478],
+          data: [250, 400, 500, 675, 800],
           fill: false
         }, {
           label: "Europe",
           type: "bar",
           backgroundColor: "#706EFF",
-          data: [408, 547, 675, 734],
+          data: [100, 150, 300, 600, 700]
         }, {
           label: "Africa",
           type: "bar",
           backgroundColor: "#4DFFEF",
           backgroundColorHover: "#3e95cd",
-          data: [133, 221, 783, 2478]
+          data: [250, 400, 500, 675, 800]
         }
         ]
       },

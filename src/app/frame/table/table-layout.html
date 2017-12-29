@@ -1,26 +1,25 @@
-
 <style>
-#dashhead{
-    background-color: rgb(15, 15, 15);
-    
+    #dashhead {
+        background-color: rgb(15, 15, 15);
+
     }
-    
-    #panelhead{
+
+    #panelhead {
         background-color: rgb(41, 34, 40);
-    
-        }
 
- #tablecont{
+    }
 
-            padding-top: 0px;
-}
+    #tablecont {
 
-
+        padding-top: 0px;
+    }
 </style>
 
 <!-- Default panel contents -->
-<div class="panel" id="panelhead" >
-    <div class="panel-heading" id="dashhead"><b>Sites not Uploded SS</b></div>
+<div class="panel" id="panelhead">
+    <div class="panel-heading" id="dashhead">
+        <b style="color: white">Sites not Uploded SS</b>
+    </div>
 </div>
 <div class='panel-body' id="tablecont">
     <table class="table table-bordered table-condensed ">
@@ -38,18 +37,21 @@
         </tbody>
     </table>
     <div class="btn-toolbar" role="toolbar" style="margin: 0;">
-       <div class="btn-group">
+        <div class="btn-group">
             <label style="margin-top:0px">Page {{currentIndex}}/{{pageNumber}}</label>
         </div>
-         <div class="btn-group pull-right">
-            <ul class="pagination" >
-                <li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}" ><a  (click)="prevPage()" href="#">Prev</a></li>
-                    <li *ngFor="let page of pagesIndex"   [ngClass]="{'active': (currentIndex == page)}">
-                        <a (click)="setPage(page)" href="#" >{{page}}</a>
-                    </li>
-                <li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}" ><a    (click)="nextPage()" href="#">Next</a></li>
+        <div class="btn-group pull-right">
+            <ul class="pagination">
+                <li [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}">
+                    <a (click)="prevPage()" href="#">Prev</a>
+                </li>
+                <li *ngFor="let page of pagesIndex" [ngClass]="{'active': (currentIndex == page)}">
+                    <a (click)="setPage(page)" href="#">{{page}}</a>
+                </li>
+                <li [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}">
+                    <a (click)="nextPage()" href="#">Next</a>
+                </li>
             </ul>
-         </div>
+        </div>
     </div>
 </div>
-	

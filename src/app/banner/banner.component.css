@@ -1,8 +1,8 @@
 .wrapper {
-    line-height: 70px;
+   /* line-height: 70px;*/
     text-align: left;
     background-color: rgb(15, 14, 15);
-    height: 2cm;
+   /*  height: 2cm; */
 }
 
 p {
@@ -10,5 +10,5 @@ p {
     margin-top: auto;
     margin-bottom: auto;
     text-align: left;
-    font-size: 1cm; 
+    font-size: .8cm; 
 }

@@ -1,9 +1,9 @@
 <br>
-<fieldset>
-
+<form>
   <div class="form-group">
-    <label for="exampleSelect1" id="cont">Region</label>
-    <select class="form-control" id="exampleSelect1">
+    <label class="label">* Region</label>
+    <select class="form-control" id="Select1">
+      <option>-All-</option>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -12,9 +12,11 @@
     </select>
   </div>
 
+
   <div class="form-group">
-    <label for="exampleSelect1">Market Unit</label>
-    <select class="form-control" id="exampleSelect1">
+    <label class="label">* Marcket Unit</label>
+    <select class="form-control" id="Select2">
+      <option>-All-</option>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -23,60 +25,60 @@
     </select>
   </div>
 
+
+
   <div class="form-group">
-    <label for="exampleSelect1">From Date</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+    <label class="label">* From Date</label>
+    <div class="col-10">
+      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <label class="label">* To Date</label>
+    <div class="col-10">
+      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input">
+    </div>
   </div>
 
   <div class="form-group">
-    <label for="exampleSelect1">To Date</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleSelect2">Message Type</label>
-    <select multiple="" class="form-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
+      <label class="label">Message Type</label>
+      <select multiple class="form-control" id="multipleSelect">
+        <option>Create Return</option>
+        <option>Event Message</option>
+        <option>Process Return</option>
+        <option>Stock Sync</option>
+      </select>
+    </div>
 
-  <div class="form-group">
-    <label for="exampleSelect1">Site Country</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>Australia</option>
-      <option>India</option>
-      <option>Sweden</option>
-      <option>Switzerland</option>
-      <option>Sri Lanka</option>
-    </select>
-  </div>
 
-  <div class="form-group">
-    <label for="exampleSelect1">Site ID</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
+    <div class="form-group">
+      <label class="label">* Site Country</label>
+      <select class="form-control" id="Select2">
+        <option>-All-</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
 
-  <button type="submit" class="btn btn-primary">Apply</button>
-  <button type="submit" class="btn btn-primary">Reset</button>
-</fieldset>
+
+    <div class="form-group">
+      <label class="label">* Site ID</label>
+      <select class="form-control" id="Select2">
+        <option>-All-</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Apply</button>
+
+</form>

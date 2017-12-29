@@ -1,4 +1,5 @@
-#cont{
-text-decoration-color: #D9E7FA;
-
+.label{
+    float: left;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
 }
