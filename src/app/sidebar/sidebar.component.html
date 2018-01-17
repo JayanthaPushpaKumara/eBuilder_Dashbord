@@ -1,6 +1,6 @@
 <br>
 <form>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label class="label">* Region</label>
     <select class="form-control" id="Select1">
       <option>-All-</option>
@@ -10,10 +10,17 @@
       <option>4</option>
       <option>5</option>
     </select>
+  </div>   -->
+
+  <div class="form-group">
+    <label for="region" class="label">* Region</label>
+    <select class="form-control" id="region" required [(ngModel)]="model.region" name="region">
+      <option *ngFor="let reg of regions" [value]="reg">{{reg}}</option>
+    </select>
   </div>
 
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label class="label">* Marcket Unit</label>
     <select class="form-control" id="Select2">
       <option>-All-</option>
@@ -23,9 +30,14 @@
       <option>4</option>
       <option>5</option>
     </select>
+  </div> -->
+
+  <div class="form-group">
+    <label for="marcketUnit" class="label">* Marcket Unit</label>
+    <select class="form-control" id="marcketUnit" required [(ngModel)]="model.marcketUnit" name="marcketUnit">
+      <option *ngFor="let mUnit of marcketUnits" [value]="mUnit">{{mUnit}}</option>
+    </select>
   </div>
-
-
 
   <div class="form-group">
     <label class="label">* From Date</label>
@@ -33,6 +45,8 @@
       <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input">
     </div>
   </div>
+
+
 
 
 
@@ -52,6 +66,14 @@
         <option>Stock Sync</option>
       </select>
     </div>
+
+
+    <!-- <div class="form-group">
+        <label for="messageType" class="label">Message Type</label>
+        <select class="form-control" id="messageType" required [(ngModel)]="model.messageType" name="messageType">
+          <option *ngFor="let mType of messageTypes" [value]="mType">{{mType}}</option>
+        </select>
+      </div> -->
 
 
     <div class="form-group">
@@ -79,6 +101,9 @@
       </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Apply</button>
+    <button type="submit" class="btn btn-primary" (click)="myFunc()">Apply</button>
+
+    <!-- {{diagnostic}} -->
 
 </form>
+
