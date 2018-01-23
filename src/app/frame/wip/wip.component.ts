@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-mixed-chart',
-  templateUrl: './mixed-chart.component.html',
-  styleUrls: ['./mixed-chart.component.css']
+  selector: 'app-wip',
+  templateUrl: './wip.component.html',
+  styleUrls: ['./wip.component.css']
 })
-export class MixedChartComponent implements OnInit {
+export class WipComponent implements OnInit {
 
   constructor() { }
 
@@ -75,7 +75,6 @@ export class MixedChartComponent implements OnInit {
         }
       }
     });
-
   }
 
 }

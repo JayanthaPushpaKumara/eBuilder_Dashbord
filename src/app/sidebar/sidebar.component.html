@@ -1,40 +1,18 @@
 <br>
 <form>
-  <!-- <div class="form-group">
-    <label class="label">* Region</label>
-    <select class="form-control" id="Select1">
-      <option>-All-</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>   -->
 
   <div class="form-group">
     <label for="region" class="label">* Region</label>
-    <select class="form-control" id="region" required [(ngModel)]="model.region" name="region">
+    <select class="form-control" id="region" required [(ngModel)]="model.region" name="region" #region>
       <option *ngFor="let reg of regions" [value]="reg">{{reg}}</option>
     </select>
   </div>
 
 
-  <!-- <div class="form-group">
-    <label class="label">* Marcket Unit</label>
-    <select class="form-control" id="Select2">
-      <option>-All-</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div> -->
 
   <div class="form-group">
     <label for="marcketUnit" class="label">* Marcket Unit</label>
-    <select class="form-control" id="marcketUnit" required [(ngModel)]="model.marcketUnit" name="marcketUnit">
+    <select class="form-control" id="marcketUnit" required [(ngModel)]="model.marcketUnit" name="marcketUnit" #marcketUnit>
       <option *ngFor="let mUnit of marcketUnits" [value]="mUnit">{{mUnit}}</option>
     </select>
   </div>
@@ -42,24 +20,21 @@
   <div class="form-group">
     <label class="label">* From Date</label>
     <div class="col-10">
-      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input">
+      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input" #fromDate>
     </div>
   </div>
-
-
-
 
 
   <div class="form-group">
     <label class="label">* To Date</label>
     <div class="col-10">
-      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input">
+      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input" #toDate>
     </div>
   </div>
 
   <div class="form-group">
       <label class="label">Message Type</label>
-      <select multiple class="form-control" id="multipleSelect">
+      <select multiple class="form-control" id="multipleSelect" #messageType>
         <option>Create Return</option>
         <option>Event Message</option>
         <option>Process Return</option>
@@ -78,7 +53,7 @@
 
     <div class="form-group">
       <label class="label">* Site Country</label>
-      <select class="form-control" id="Select2">
+      <select class="form-control" id="Select2" #siteCountry>
         <option>-All-</option>
         <option>1</option>
         <option>2</option>
@@ -91,7 +66,7 @@
 
     <div class="form-group">
       <label class="label">* Site ID</label>
-      <select class="form-control" id="Select2">
+      <select class="form-control" id="Select2" #siteId>
         <option>-All-</option>
         <option>1</option>
         <option>2</option>
@@ -102,8 +77,17 @@
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="myFunc()">Apply</button>
+    <button type="submit" class="btn btn-primary" (click) = 'addTodo( region.value,
+                                                                      marcketUnit.value,
+                                                                      fromDate.value,
+                                                                      toDate.value,
+                                                                      messageType.value,
+                                                                      siteCountry.value,
+                                                                      siteId.value)'>Apply</button>
 
     <!-- {{diagnostic}} -->
+
+
 
 </form>
 

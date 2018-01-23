@@ -2,35 +2,38 @@ import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-line-chart2',
-  templateUrl: './line-chart2.component.html',
-  styleUrls: ['./line-chart2.component.css']
+  selector: 'app-message-failure-pr-ue',
+  templateUrl: './message-failure-pr-ue.component.html',
+  styleUrls: ['./message-failure-pr-ue.component.css']
 })
-export class LineChart2Component implements OnInit {
+export class MessageFailurePrUeComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
 
-
-
     new Chart(document.getElementById("line-chart2"), {
       type: 'line',
       data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug"],
+        labels: ["2018-01-16","2018-01-18","2018-01-20","2018-01-22"],
         datasets: [{
-          data: [1,8,5,2,4,5,8,9],
-          label: "Africa",
+          data: [57,57,58,122],
+          label: "PR FAILURE",
           borderColor: "#3e95cd",
           fill: false
         }, {
-          data: [5,6,2,4,7,8,9,3],
-          label: "Asia",
+          data: [14,100],
+          label: "PR TOTAL",
           borderColor: "#8e5ea2",
           fill: false
         }, {
-          data: [7,5,6,3,9,8,8,4],
-          label: "Europe",
+          data: [3,3,3,3],
+          label: "UE FAILURE",
+          borderColor: "orange",
+          fill: false
+        }, {
+          data: [5,3],
+          label: "UE TOTAL",
           borderColor: "#3cba9f",
           fill: false
         }]
@@ -63,13 +66,11 @@ export class LineChart2Component implements OnInit {
         },
         elements: {
           line: {
-            tension: .3, // disables bezier curves
+            tension: 0, // disables bezier curves
           }
         }
       }
     });
-
-
 
   }
 

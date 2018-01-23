@@ -24,7 +24,21 @@ export class SidebarComponent implements OnInit {
   // get diagnostic() { return JSON.stringify(this.model); }
 
   myFunc(){
-    console.log(JSON.stringify(this.model));
+    alert(JSON.stringify(this.model));
+  }
+
+  addTodo(region:string, marcketUnit:string, fromDate:string, toDate:string, messageType:string, siteCountry:string, siteId:string ) {
+
+
+    var json =  "{ \"SortAs\": \""+region+
+                "\" , \"marcketUnit\": \""+ marcketUnit+
+                "\" , \"fromDate\": \""+ fromDate+
+                "\" , \"toDate\": \""+ toDate+
+                "\" , \"messageType\": \""+ messageType+ 
+                "\" , \"siteCountry\": \""+ siteCountry+ 
+                "\" , \"siteId\": \""+ siteId+"\" }";
+
+    alert(json);
   }
 
 }

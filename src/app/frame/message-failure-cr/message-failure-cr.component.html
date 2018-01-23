@@ -1,0 +1,16 @@
+<div class="panel" id="panelhead" >
+  <div class="panel-heading" id="dashhead"><b>Message Failure Accumulation CR</b></div>
+</div>
+
+<canvas baseChart height="185"
+
+  [datasets]="lineChartData" 
+  [labels]="lineChartLabels" 
+  [options]="lineChartOptions"
+  [colors]="lineChartColors" 
+  [legend]="lineChartLegend" 
+  [chartType]="lineChartType" 
+  (chartHover)="chartHovered($event)" 
+  (chartClick)="chartClicked($event)">
+
+</canvas>
