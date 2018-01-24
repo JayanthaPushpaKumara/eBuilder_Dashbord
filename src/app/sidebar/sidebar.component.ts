@@ -1,44 +1,54 @@
-import { Component, OnInit } from '@angular/core';
-import { InputControls } from './inputControls';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { Region, MarcketUnit } from './model/inputControls.model';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
-
-  messageTypes = ['Create Return', 'Event Message', 'Process Return', 'Stock Sync'];
-  regions = ["-All-","APAC" , "brazil" , "east asia" , "europe" , "latin america" , "middle east" , "north america"];
-  marcketUnits =  ["-All-","MU Benelux" ,  "MU Brazil" ,  "MU CHATA" ,  "MU Central & Eastern Europe" , "MU Commonwealth Independent States" ,  "MU France" , "MU Germany" , "MU Greater China" ,  "MU Iberia" ,  "MU India" ,  "MU Latin America" ,  "MU Middle East and Africa" ,  "MU Nordic & BALTIC" ,  "MU North America" ,  "MU SEA and Oceania" ,  "MU SEM" ,  "MU UK & Ireland"]
-
-  model = new InputControls(this.regions[0],this.marcketUnits[0],'2017-10-01','2018-01-01',this.messageTypes[0],'site country');
-
-  constructor() { }
-
-  ngOnInit() {
+  getData(inputForm: NgForm): void {
+    console.log(inputForm.value)
   }
 
+  region = 'All';
 
-  // get diagnostic() { return JSON.stringify(this.model); }
+  regions: Region[] = [
+    { name: 'All' },
+    { name: 'APAC' },
+    { name: 'brazil' },
+    { name: 'east asia' },
+    { name: 'europe' },
+    { name: 'latin america' },
+    { name: 'middle east' },
+    { name: 'north america' }
+  ];
 
-  myFunc(){
-    alert(JSON.stringify(this.model));
-  }
+  marcketUnit = 'All';
 
-  addTodo(region:string, marcketUnit:string, fromDate:string, toDate:string, messageType:string, siteCountry:string, siteId:string ) {
+  marcketUnits: MarcketUnit[] = [
+    { name: 'All' },
+    { name: 'MU Benelux' },
+    { name: 'MU Brazil' },
+    { name: 'MU CHATA' },
+    { name: 'MU Central & Eastern Europe' },
+    { name: 'MU Commonwealth Independent States' },
+    { name: 'MU France' },
+    { name: 'MU Germany' },
+    { name: 'MU Greater China' },
+    { name: 'MU Iberia' },
+    { name: 'MU India' },
+    { name: 'MU Latin America' },
+    { name: 'MU Middle East and Africa' },
+    { name: 'MU Nordic & BALTIC' },
+    { name: 'MU North America' },
+    { name: 'MU SEA and Oceania' },
+    { name: 'MU SEM' },
+    { name: 'MU UK & Ireland' }
+  ];
 
-
-    var json =  "{ \"SortAs\": \""+region+
-                "\" , \"marcketUnit\": \""+ marcketUnit+
-                "\" , \"fromDate\": \""+ fromDate+
-                "\" , \"toDate\": \""+ toDate+
-                "\" , \"messageType\": \""+ messageType+ 
-                "\" , \"siteCountry\": \""+ siteCountry+ 
-                "\" , \"siteId\": \""+ siteId+"\" }";
-
-    alert(json);
-  }
-
+  siteCountry = 'All';
+  siteId = 'All';
 }

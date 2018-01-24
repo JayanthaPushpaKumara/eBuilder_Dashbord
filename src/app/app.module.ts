@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AppComponent } from './app.component';
 
@@ -12,9 +13,9 @@ import { FrameComponent } from './frame/frame.component';
 
 // import { LineChartComponent } from './frame/line-chart/line-chart.component';
 // import { LineChart2Component } from './frame/line-chart2/line-chart2.component';
-import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
+//import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
 // import { MixedChartComponent } from './frame/mixed-chart/mixed-chart.component';
-import { TestComponent } from './frame/test/test.component';
+//import { TestComponent } from './frame/test/test.component';
 
 import { DataTableModule } from 'angular5-data-table';
 
@@ -36,10 +37,10 @@ import { DataTableDemo4 } from './frame/demo4/data-table-demo4';
     BannerComponent,
     FrameComponent,
     // LineChartComponent,
-    PieChartComponent,    
+    // PieChartComponent,    
     // MixedChartComponent,
     // LineChart2Component,
-    TestComponent,
+    // TestComponent,
     
     SiteSuccessAndFailMessagesComponent,
     MessageFailureCrComponent,
@@ -56,7 +57,8 @@ import { DataTableDemo4 } from './frame/demo4/data-table-demo4';
     ChartsModule,
     FormsModule,
     AppRoutingModule, 
-    DataTableModule   
+    DataTableModule,
+    BsDatepickerModule.forRoot()  
     
   ],
   providers: [],

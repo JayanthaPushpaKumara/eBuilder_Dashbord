@@ -1,93 +1,77 @@
 <br>
-<form>
+<form #inputControlsForm="ngForm" (ngSubmit)="getData(inputControlsForm)">
 
   <div class="form-group">
     <label for="region" class="label">* Region</label>
-    <select class="form-control" id="region" required [(ngModel)]="model.region" name="region" #region>
-      <option *ngFor="let reg of regions" [value]="reg">{{reg}}</option>
+    <select class="form-control" id="region" required [(ngModel)]="region" name="region" >
+      <option *ngFor="let reg of regions" [value]="reg.name">{{reg.name}}</option>
     </select>
   </div>
-
-
 
   <div class="form-group">
     <label for="marcketUnit" class="label">* Marcket Unit</label>
-    <select class="form-control" id="marcketUnit" required [(ngModel)]="model.marcketUnit" name="marcketUnit" #marcketUnit>
-      <option *ngFor="let mUnit of marcketUnits" [value]="mUnit">{{mUnit}}</option>
+    <select class="form-control" id="marcketUnit" required [(ngModel)]="marcketUnit" name="marcketUnit" >
+      <option *ngFor="let mUnit of marcketUnits" [value]="mUnit.name">{{mUnit.name}}</option>
     </select>
   </div>
 
   <div class="form-group">
-    <label class="label">* From Date</label>
+    <label class="label" for="fromDate">* From Date</label>
     <div class="col-10">
-      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input" #fromDate>
+      <input class="form-control" type="text" bsDatepicker id="fromDate" name="fromDate" [(ngModel)]="fromDate" >
     </div>
   </div>
 
 
   <div class="form-group">
-    <label class="label">* To Date</label>
+    <label class="label" for="toDate">* To Date</label>
     <div class="col-10">
-      <input class="form-control" type="date" value="YYYY-MM-DD" id="example-date-input" #toDate>
+      <input class="form-control" type="text" bsDatepicker id="toDate" name="toDate" [(ngModel)]="toDate" >
     </div>
   </div>
 
   <div class="form-group">
-      <label class="label">Message Type</label>
-      <select multiple class="form-control" id="multipleSelect" #messageType>
-        <option>Create Return</option>
-        <option>Event Message</option>
-        <option>Process Return</option>
-        <option>Stock Sync</option>
-      </select>
-    </div>
+    <label class="label" for="messageType">Message Type</label>
+    <select multiple class="form-control" id="messageType" name="messageType" [(ngModel)]="messageType" >
+      <option>Create Return</option>
+      <option>Event Message</option>
+      <option>Process Return</option>
+      <option>Stock Sync</option>
+    </select>
+  </div>
 
 
-    <!-- <div class="form-group">
-        <label for="messageType" class="label">Message Type</label>
-        <select class="form-control" id="messageType" required [(ngModel)]="model.messageType" name="messageType">
-          <option *ngFor="let mType of messageTypes" [value]="mType">{{mType}}</option>
-        </select>
-      </div> -->
+  <div class="form-group">
+    <label class="label" for="siteCountry">* Site Country</label>
+    <select class="form-control" id="siteCountry" name="siteCountry" [(ngModel)]="siteCountry">
+      <option>All</option>
+      <option>Test 1</option>
+      <option>Test 2</option>
+      <option>Test 3</option>
+      <option>Test 4</option>
+      <option>Test 5</option>
+    </select>
+  </div>
 
 
-    <div class="form-group">
-      <label class="label">* Site Country</label>
-      <select class="form-control" id="Select2" #siteCountry>
-        <option>-All-</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+  <div class="form-group">
+    <label class="label" for="siteId">* Site ID</label>
+    <select class="form-control" id="siteId" name="siteId" [(ngModel)]="siteId" >
+      <option>All</option>
+      <option>Test 1</option>
+      <option>Test 2</option>
+      <option>Test 3</option>
+      <option>Test 4</option>
+      <option>Test 5</option>
+    </select>
+  </div>
 
+  <!-- <button type="submit" class="btn btn-primary" (click)="myFunc()">Apply</button> -->
 
-    <div class="form-group">
-      <label class="label">* Site ID</label>
-      <select class="form-control" id="Select2" #siteId>
-        <option>-All-</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-
-    <button type="submit" class="btn btn-primary" (click)="myFunc()">Apply</button>
-    <button type="submit" class="btn btn-primary" (click) = 'addTodo( region.value,
-                                                                      marcketUnit.value,
-                                                                      fromDate.value,
-                                                                      toDate.value,
-                                                                      messageType.value,
-                                                                      siteCountry.value,
-                                                                      siteId.value)'>Apply</button>
-
-    <!-- {{diagnostic}} -->
-
+  <button type="submit" class="btn btn-primary">Save</button>
 
 
 </form>
+
+<p style="color: aliceblue"> {{inputControlsForm.value | json}} </p>
 
