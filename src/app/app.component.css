@@ -1,16 +1,14 @@
-.banner {
-    background-color: rgb(15, 14, 15);
-}
-
 #nav {
     background-color: rgb(66, 64, 68);
-    height: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    /* height: auto; */
 }
 
 #maincont {
-    padding-top: .5cm;
-    padding-bottom: .5cm;
-    padding-right: .5cm;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    padding-right: 0px;
     padding-left: 0cm;
     background-color: rgb(66, 64, 68);
 }

@@ -1,6 +1,12 @@
+<div class="panel" id="panelhead" >
+    <div class="panel-heading" id="dashhead"><b>Site Not Uploaded SS</b></div>
+</div>
 <!-- <div style="margin: auto;  margin-bottom: 50px;">
   <data-table id="persons-grid"
-      headerTitle="My Employees"
+    [pagination]="true"
+    [autoReload]="true"
+    indexColumnVisible="true"
+    selectColumnVisible="false"
       [items]="items"
       [itemCount]="itemCount"
       (reload)="reloadItems($event)"
@@ -9,28 +15,30 @@
       (rowDoubleClick)="rowDoubleClick($event)"
       [rowTooltip]="rowTooltip"
 
-      [limit]="8"
+      [limit]="5"
       [indexColumn]="false"
       
 
       >
       <data-table-column
           [property]="'name'"
-          [header]="'A Name'"
+          [header]="'Message Site ID'"
           [sortable]="true"
           [resizable]="true">
       </data-table-column>    
       <data-table-column
           [property]="'date'"
-          [header]="'Date'"
+          [header]="'Last Uploded Date'"
           [sortable]="true">
           <ng-template #dataTableCell let-item="item">
               <span>{{item.date | date:'yyyy-MM-dd'}}</span>
           </ng-template>
       </data-table-column>
+
       <data-table-column
           property="phoneNumber"
           header="Phone number"
+          [visible]="false">
           > 
           
       </data-table-column>
@@ -42,12 +50,43 @@
 
 
   </data-table>
-</div> -->
-
-<div class="panel" id="panelhead" >
-    <div class="panel-heading" id="dashhead"><b>Site Not Uploaded SS</b></div>
 </div>
 
-<p>
-    site not uoloaded ss table content here
-</p>
+-->
+
+
+
+<!-- 
+<div style=" background-color: white;">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center">Message Site ID</th>
+                <th style="text-align: center">Last Uploded Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0111</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0113</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0118</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0120</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>0122</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->

@@ -1,5 +1,6 @@
 <br>
-<form #inputControlsForm="ngForm" (ngSubmit)="getData(inputControlsForm)">
+
+<form #inputControlsForm="ngForm" (ngSubmit)="getData(inputControlsForm)" class="scrol">
 
   <div class="form-group">
     <label for="region" class="label">* Region</label>
@@ -17,17 +18,17 @@
 
   <div class="form-group">
     <label class="label" for="fromDate">* From Date</label>
-    <div class="col-10">
+   
       <input class="form-control" type="text" bsDatepicker id="fromDate" name="fromDate" [(ngModel)]="fromDate" >
-    </div>
+    
   </div>
 
 
   <div class="form-group">
     <label class="label" for="toDate">* To Date</label>
-    <div class="col-10">
+  
       <input class="form-control" type="text" bsDatepicker id="toDate" name="toDate" [(ngModel)]="toDate" >
-    </div>
+   
   </div>
 
   <div class="form-group">
@@ -68,10 +69,13 @@
 
   <!-- <button type="submit" class="btn btn-primary" (click)="myFunc()">Apply</button> -->
 
-  <button type="submit" class="btn btn-primary">Save</button>
+
 
 
 </form>
+<br>
+<button type="submit" class="btn btn-primary">Apply</button> &nbsp;&nbsp;
+<button type="button" class="btn btn-primary">Reset</button>
 
-<p style="color: aliceblue"> {{inputControlsForm.value | json}} </p>
+<!-- <p style="color: aliceblue"> {{inputControlsForm.value | json}} </p> -->
 

@@ -1,53 +1,42 @@
-#lineChart{
+#lineChart {
     position: absolute;
 }
 
-#pieChart{    
+#pieChart {
     position: absolute;
     margin-left: 365px;
 }
 
-#barChart{
+#barChart {
     float: right;
 }
 
-
-.jumbotron{
-    padding-top:0px; 
-    padding-bottom:0px; 
-    padding-left:0px; 
-    padding-right:0px; 
+.jumbotron {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     background-color: rgb(70, 65, 73);
-    margin-bottom: 10px;
-    
-    
+    margin-bottom: 5px;
 }
 
-#kpi{
-    line-height: 70px;
-    height: 250px;
-    width: 1080px;
-    background-color: rgb(55, 52, 59);
-    border: 14mm;
-    border-color: black;
-    -ms-grid-row-align: center;
-    position: relative;
-}
-
-
-#cont{
+#cont {
     background-color: rgb(40, 38, 43);
-    padding-top:10px; 
-    padding-bottom:10px; 
-    padding-left:10px; 
-    padding-right:10px; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 3px;
 }
 
-.row{
+.row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
-    padding-top:0px;
-    padding-bottom:0px; 
-    padding-left:0px; 
-    padding-right:0px; 
-
+.dashlat {
+    margin-left: 0px;
+    margin-right: 0px;
 }

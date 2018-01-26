@@ -2,7 +2,8 @@
   <div class="panel-heading" id="dashhead"><b>Message Failure Accumulation CR</b></div>
 </div>
 
-<canvas baseChart height="185"
+<div class="lineCharts">
+  <canvas baseChart height="185"
 
   [datasets]="lineChartData" 
   [labels]="lineChartLabels" 
@@ -14,3 +15,7 @@
   (chartClick)="chartClicked($event)">
 
 </canvas>
+</div>
+
+
+

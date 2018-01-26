@@ -2,4 +2,9 @@
     float: left;
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.scrol{
+    height:500px;
+    overflow-y: scroll;
 }
