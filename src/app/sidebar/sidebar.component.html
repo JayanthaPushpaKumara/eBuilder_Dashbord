@@ -19,7 +19,7 @@
   <div class="form-group">
     <label class="label" for="fromDate">* From Date</label>
    
-      <input class="form-control" type="text" bsDatepicker id="fromDate" name="fromDate" [(ngModel)]="fromDate" >
+      <input class="form-control" type="text" bsDatepicker [bsConfig]="datePickerConfig" placement="right" id="fromDate" name="fromDate" [(ngModel)]="fromDate" >
     
   </div>
 
@@ -27,7 +27,7 @@
   <div class="form-group">
     <label class="label" for="toDate">* To Date</label>
   
-      <input class="form-control" type="text" bsDatepicker id="toDate" name="toDate" [(ngModel)]="toDate" >
+      <input class="form-control" type="text" bsDatepicker [bsConfig]="datePickerConfig" placement="right" id="toDate" name="toDate" [(ngModel)]="toDate" >
    
   </div>
 
@@ -74,8 +74,9 @@
 
 </form>
 <br>
-<button type="submit" class="btn btn-primary">Apply</button> &nbsp;&nbsp;
-<button type="button" class="btn btn-primary">Reset</button>
+<button type="submit" class="btn btn-primary" (click)= "getData(inputControlsForm)">Apply</button> &nbsp;&nbsp;
+<button type="button" class="btn btn-primary" (click)= "mydate()">Reset</button>
+
 
 <!-- <p style="color: aliceblue"> {{inputControlsForm.value | json}} </p> -->
 

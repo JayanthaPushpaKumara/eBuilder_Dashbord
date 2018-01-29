@@ -1,17 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { Region, MarcketUnit } from './model/inputControls.model';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit  {
 
-  getData(inputForm: NgForm): void {
-    console.log(inputForm.value)
+  datePickerConfig : Partial<BsDatepickerConfig>;
+
+  constructor(){
+    this.datePickerConfig =   Object.assign({},{
+      containerClass : 'theme-dark-blue', 
+      showWeekNumbers : false,
+      dateInputFormat : 'YYYY/MM/DD'
+    });
   }
+
+  ngOnInit(){
+    var d = new Date();
+    d.setDate(d.getDate()-7);
+
+    this.fromDate = d;    
+    this.toDate = new Date();
+  }
+
+  public toDate;
+  public fromDate;
 
   region = 'All';
 
@@ -51,4 +69,10 @@ export class SidebarComponent {
 
   siteCountry = 'All';
   siteId = 'All';
+
+   
+
+  getData(inputForm: NgForm): void {
+    console.log(inputForm.value)
+  }
 }
