@@ -5,6 +5,19 @@
   </div>
 </div>
 
+
+
 <div class="lineCharts">
-  <canvas id="line-chart2" height="228" width="367"></canvas>
+  <canvas baseChart height="185"
+
+  [datasets]="lineChartData" 
+  [labels]="lineChartLabels" 
+  [options]="lineChartOptions"
+  [colors]="lineChartColors" 
+  [legend]="lineChartLegend" 
+  [chartType]="lineChartType" 
+  (chartHover)="chartHovered($event)" 
+  (chartClick)="chartClicked($event)">
+
+</canvas>
 </div>
