@@ -15,7 +15,7 @@ export class WipComponent implements OnInit {
   }
 
   public getData(): void {
-    this.http.get('http://www.mocky.io/v2/5a6ecc5230000003116fe31b').subscribe(
+    this.http.get('http://localhost:3000/api/wip').subscribe(
       data => {
         console.log(data);
         this.lineChartData = data;

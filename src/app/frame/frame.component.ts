@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-frame',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+
+  }
 
   ngOnInit() {
+      this.getData();
+  }
+
+  public getData(): void {
+
+      this.http.get('http://localhost:3000/api/loadInputControls').subscribe(
+
+          data => {
+              console.log(data);
+          },
+
+          (err: HttpErrorResponse) => {
+              if (err.error instanceof Error) {
+                  console.log("Client side Error occured")
+              } else {
+                  console.log("Server side Eror occured")
+              }
+          }
+      );
+
   }
 
 }

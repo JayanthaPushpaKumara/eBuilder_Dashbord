@@ -5,17 +5,13 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
+import { DataService } from './data.service';
+
 import { AppComponent } from './app.component';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BannerComponent } from './banner/banner.component';
 import { FrameComponent } from './frame/frame.component';
-
-// import { LineChartComponent } from './frame/line-chart/line-chart.component';
-// import { LineChart2Component } from './frame/line-chart2/line-chart2.component';
-//import { PieChartComponent } from './frame/pie-chart/pie-chart.component';
-// import { MixedChartComponent } from './frame/mixed-chart/mixed-chart.component';
-//import { TestComponent } from './frame/test/test.component';
 
 import { DataTableModule } from 'angular5-data-table';
 
@@ -29,6 +25,7 @@ import { SiteNotUploadedSsComponent } from './frame/site-not-uploaded-ss/site-no
 import { SiteNotUploadedCrPrUeComponent } from './frame/site-not-uploaded-cr-pr-ue/site-not-uploaded-cr-pr-ue.component';
 
 import { DataTableDemo4 } from './frame/demo4/data-table-demo4';
+import {DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,11 +33,6 @@ import { DataTableDemo4 } from './frame/demo4/data-table-demo4';
     SidebarComponent,
     BannerComponent,
     FrameComponent,
-    // LineChartComponent,
-    // PieChartComponent,    
-    // MixedChartComponent,
-    // LineChart2Component,
-    // TestComponent,
     
     SiteSuccessAndFailMessagesComponent,
     MessageFailureCrComponent,
@@ -61,7 +53,7 @@ import { DataTableDemo4 } from './frame/demo4/data-table-demo4';
     BsDatepickerModule.forRoot()  
     
   ],
-  providers: [],
+  providers: [DataService,DatePipe],
 
   bootstrap: [AppComponent]
 })
