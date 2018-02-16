@@ -7,13 +7,12 @@
 
         (rowClick)="rowClick($event)"
         (rowDoubleClick)="rowDoubleClick($event)"
-        [rowTooltip]="rowTooltip"
+   
 
         [limit]="8"
         [indexColumn]="false"
-        
-
         >
+        <!-- [rowTooltip]="rowTooltip" -->
         <data-table-column
             [property]="'name'"
             [header]="'A Name'"

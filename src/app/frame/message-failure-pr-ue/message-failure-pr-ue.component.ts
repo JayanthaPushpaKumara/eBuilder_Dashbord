@@ -17,7 +17,7 @@ export class MessageFailurePrUeComponent implements OnInit {
   
 
   public getData(): void {
-    this.http.get('http://www.mocky.io/v2/5a6ec8bb30000008106fe30e').subscribe(
+    this.http.get('http://localhost:3000/api/Msg_F_Acc_PR&UE').subscribe(
       data => {
         console.log(data);
         this.lineChartData = data;

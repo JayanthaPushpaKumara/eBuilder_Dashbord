@@ -12,37 +12,38 @@ export class MessageFailureCrComponent implements OnInit {
 
   ngOnInit() {
 
-      //this.createChart();
-      this.getData();
+    //this.createChart();
+    this.getData();
 
   }
 
   public getData(): void {
-      //const that = this;
-      this.http.get('http://www.mocky.io/v2/5a69cbb82e000096207a75eb').subscribe(
+    //const that = this;
+    //this.http.get('http://www.mocky.io/v2/5a69cbb82e000096207a75eb').subscribe(      
+    this.http.get('http://localhost:3000/api/Msg_F_Acc_CR').subscribe(
 
-          data => {           
-              console.log(data);   
-              this.lineChartData = data;
-          },
+      data => {
+        console.log(data);
+        this.lineChartData = data;
+      },
 
-          (err: HttpErrorResponse) => {
-              if (err.error instanceof Error) {
-                  console.log("Client side Error occured")
-              } else {
-                  console.log("Server side Eror occured")
-              }
-          }
-      );
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+          console.log("Client side Error occured")
+        } else {
+          console.log("Server side Eror occured")
+        }
+      }
+    );
   }
 
 
-  public lineChartData: any = [{ },{ }];
+  public lineChartData: any = [{}, {}];
 
 
   public lineChartType: string = 'line';
 
-  public lineChartLabels: Array<any> = ["2018-01-16","2018-01-17","2018-01-18","2018-01-19","2018-01-20"];
+  public lineChartLabels: Array<any> = ["2018-01-16", "2018-01-17", "2018-01-18", "2018-01-19", "2018-01-20"];
   public lineChartOptions: any = {
     responsive: true,
     scales: {
