@@ -2,11 +2,20 @@
     background-color: rgb(66, 64, 68);
     margin-right: 0px;
     margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     /* height: auto; */
 }
 
+#panel{
+
+padding-left: 10px;
+padding-right: 10px;
+}
 #maincont {
-    padding-top: 3px;
+    padding-top: 0px;
     padding-bottom: 0px;
     padding-right: 0px;
     padding-left: 0cm;

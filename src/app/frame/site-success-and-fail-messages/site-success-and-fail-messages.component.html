@@ -1,20 +1,22 @@
-<div class="panel" id="panelhead">
-  <div class="panel-heading" id="dashhead">
+<div class="card" id="cardid">
+  <div class="card-header" id="dashhead">
     <b>Site Success and Fail Messages</b>
   </div>
+  <div class="card-block" id="content" >
+    <div class="lineChart">
+      <canvas baseChart height="185"
+    
+      [datasets]="lineChartData" 
+      [labels]="lineChartLabels" 
+      [options]="lineChartOptions"
+      [colors]="lineChartColors" 
+      [legend]="lineChartLegend" 
+      [chartType]="lineChartType" 
+      (chartHover)="chartHovered($event)" 
+      (chartClick)="chartClicked($event)">
+    
+    </canvas>
+    </div></div>
 </div>
 
-<div class="lineChart">
-  <canvas baseChart height="185"
 
-  [datasets]="lineChartData" 
-  [labels]="lineChartLabels" 
-  [options]="lineChartOptions"
-  [colors]="lineChartColors" 
-  [legend]="lineChartLegend" 
-  [chartType]="lineChartType" 
-  (chartHover)="chartHovered($event)" 
-  (chartClick)="chartClicked($event)">
-
-</canvas>
-</div>

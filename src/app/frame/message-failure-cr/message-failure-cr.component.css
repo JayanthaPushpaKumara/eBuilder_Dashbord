@@ -1,8 +1,18 @@
-
-#panelhead {
-    background-color: rgb(0, 0, 0);
+#cardid {
+    background-color: rgb(55, 52, 59);
+   
 }
 
-.panel-heading{
-    color: white;
+#dashhead{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+  padding: .1cm;
+    
+}
+
+#content{
+padding-top: 5px;
+padding-bottom: 5px;
+   
+
 }

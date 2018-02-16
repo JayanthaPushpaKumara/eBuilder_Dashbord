@@ -1,15 +1,12 @@
-<div class="panel" id="panelhead" >
-  <div class="panel-heading" id="dashhead"><b>Work in Progress (WIP)</b></div>
-</div>
-
-
-
-
-
-<div class="lineCharts">
-  <canvas baseChart height="185"
-
-  [datasets]="lineChartData" 
+<div class="card" id="cardid">
+  <div class="card-header" id="dashhead">
+    <b>Work in Progress (WIP)</b>
+  </div>
+  <div class="card-block"  id="content">
+    <div class="lineChart">
+      <canvas baseChart height="185"
+    
+      [datasets]="lineChartData" 
   [labels]="lineChartLabels" 
   [options]="lineChartOptions"
   [colors]="lineChartColors" 
@@ -17,6 +14,7 @@
   [chartType]="lineChartType" 
   (chartHover)="chartHovered($event)" 
   (chartClick)="chartClicked($event)">
-
-</canvas>
+    
+    </canvas>
+    </div></div>
 </div>

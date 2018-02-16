@@ -1,5 +1,5 @@
 <br>
-
+<div id="nav">
 <form #inputControlsForm="ngForm" (ngSubmit)="getData(inputControlsForm)" class="scrol">
 
   <div class="form-group">
@@ -10,7 +10,7 @@
   </div>
 
   <div class="form-group">
-    <label for="marcketUnit" class="label">* Marcket Unit</label>
+    <label for="marcketUnit" class="label">* Market Unit</label>
     <select class="form-control" id="marcketUnit" required [(ngModel)]="marcketUnit" name="marcketUnit" >
       <option *ngFor="let mUnit of marcketUnits" [value]="mUnit.name">{{mUnit.name}}</option>
     </select>
@@ -77,6 +77,6 @@
 <button type="submit" class="btn btn-primary" (click)= "getData(inputControlsForm)">Apply</button> &nbsp;&nbsp;
 <button type="button" class="btn btn-primary" (click)= "mydate()">Reset</button>
 
-
+</div>
 <!-- <p style="color: aliceblue"> {{inputControlsForm.value | json}} </p> -->
 
