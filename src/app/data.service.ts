@@ -5,6 +5,10 @@ export class DataService {
 
   constructor() { }
 
+
+  public dataset1 : any;
+  public globalVar = '';
+
   date : string[]=[];
 
   addDate(value : string){

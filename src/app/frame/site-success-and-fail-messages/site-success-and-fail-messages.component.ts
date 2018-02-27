@@ -1,32 +1,30 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DataService } from '../../data.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
+
     selector: 'app-site-success-and-fail-messages',
     templateUrl: './site-success-and-fail-messages.component.html',
     styleUrls: ['./site-success-and-fail-messages.component.css']
 })
 export class SiteSuccessAndFailMessagesComponent {
 
-    constructor(private http: HttpClient,private dataService:DataService) {
-
-    }
+    constructor(private http: HttpClient, private dataService: DataService, private datePipe: DatePipe) { }
 
     ngOnInit() {
         this.getData();
-        this.getlineChartLabel();
-        
     }
 
     public getData(): void {
-        //const that = this;
+
         //this.http.get('http://www.mocky.io/v2/5a69bcb82e000037197a7589').subscribe(
-        this.http.get('http://localhost:3000/api/SiteSuccess&FailMsg').subscribe(
+        this.http.get('http://localhost:3000/api/SiteSuccess&FailMsg2').subscribe(
 
             data => {
-                console.log(data);
-                this.lineChartData = data;
+                console.log(data[1]);
+                this.lineChartData = data[1];
             },
 
             (err: HttpErrorResponse) => {
@@ -37,16 +35,30 @@ export class SiteSuccessAndFailMessagesComponent {
                 }
             }
         );
+
+        //this.getlineChartLabelfromnode();
+        
+        this.getDateRange();
+
     }
 
-    public getlineChartLabel(){
-        
-        var data =  this.dataService.getDateArray();
-        data.reverse();
-        console.log(data);
-        this.lineChartLabels = data;
-        
-    }
+
+    public getDateRange(): void {
+
+        this.http.get('http://localhost:3000/api/SiteSuccess&FailMsg2').subscribe(
+          data => {
+            console.log(data[0].dateRange);
+            this.lineChartLabels = data[0].dateRange;
+          },
+          (err: HttpErrorResponse) => {
+            if (err.error instanceof Error) {
+              console.log("Client side Error occured")
+            } else {
+              console.log("Server side Eror occured")
+            }
+          }
+        );
+      }
 
     public lineChartData: any = [
         { data: [], label: 'undefined' },
@@ -62,11 +74,9 @@ export class SiteSuccessAndFailMessagesComponent {
         { data: [], label: 'undefined' }
     ];
 
-    //public lineChartData: any = [{ },{ },{ },{ },{ }];
+    
 
     public lineChartType: string = 'line';
-
-    
 
     public lineChartLabels: Array<any> = [];
 
@@ -106,58 +116,87 @@ export class SiteSuccessAndFailMessagesComponent {
 
     public lineChartColors: Array<any> = [
         { // red
-            borderColor: '#FF5E5E',
+            borderColor: '#641E16',
             fill: false,
         },
         { // green
-            borderColor: '#F5FF5E',
+            borderColor: '#9B59B6',
             fill: false,
         },
         { // red
-            borderColor: '#6FFF3A',
+            borderColor: '#21618C',
             fill: false,
         },
         { // green
-            borderColor: '#3AFFE4',
+            borderColor: '#48C9B0',
             fill: false,
         },
         { // blue
-            borderColor: '#3A4BFF',
+            borderColor: '#F1C40F',
             fill: false,
         },
         { // green
-            borderColor: '#F5FF5E',
+            borderColor: '#A04000',
             fill: false,
         },
         { // red
-            borderColor: '#6FFF3A',
+            borderColor: '#E74C3C',
             fill: false,
         },
         { // green
-            borderColor: '#3AFFE4',
+            borderColor: '#4DFE05',
             fill: false,
         },
         { // blue
-            borderColor: '#3A4BFF',
+            borderColor: '#FE0505',
             fill: false,
         },
         { // green
-            borderColor: '#F5FF5E',
+            borderColor: '#00F3FF',
             fill: false,
         },
         { // red
-            borderColor: '#6FFF3A',
+            borderColor: '#FF00F0',
             fill: false,
         }
     ];
 
-    // events
-    public chartClicked(e: any): void {
-        console.log(e);
+
+    public chartClicked(): void {
+        
     }
 
-    public chartHovered(e: any): void {
-        console.log(e);
-    }
+
+    // public getlineChartLabelfromnode() {
+    //     this.http.get('http://localhost:3000/api/getDate').subscribe(
+
+    //         data => {
+    //             var date1 = new Date(data[0]);
+    //             var date2 = new Date(data[1]);
+
+    //             this.dataService.date.length = 0;
+    //             date2.setDate(date2.getDate() + 1);
+
+    //             do {
+    //                 this.dataService.addDate(this.datePipe.transform(date1, "yyyy-MM-dd").toString());
+    //                 date1.setDate(date1.getDate() + 1);
+
+    //             } while (date1.toString() != date2.toString());
+    //         },
+
+    //         (err: HttpErrorResponse) => {
+    //             if (err.error instanceof Error) {
+    //                 console.log("Client side Error occured")
+    //             } else {
+    //                 console.log("Server side Eror occured")
+    //             }
+    //         }
+    //     );
+
+    //     var label = this.dataService.getDateArray();
+    //     this.lineChartLabels = label;
+    // }
+
+
 
 }

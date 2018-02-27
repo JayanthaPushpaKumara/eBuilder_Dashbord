@@ -1,92 +1,23 @@
 <div class="panel" id="panelhead" >
     <div class="panel-heading" id="dashhead"><b>Site Not Uploaded SS</b></div>
 </div>
-<!-- <div style="margin: auto;  margin-bottom: 50px;">
-  <data-table id="persons-grid"
-    [pagination]="true"
-    [autoReload]="true"
-    indexColumnVisible="true"
-    selectColumnVisible="false"
-      [items]="items"
-      [itemCount]="itemCount"
-      (reload)="reloadItems($event)"
 
-      (rowClick)="rowClick($event)"
-      (rowDoubleClick)="rowDoubleClick($event)"
-      [rowTooltip]="rowTooltip"
-
-      [limit]="5"
-      [indexColumn]="false"
-      
-
-      >
-      <data-table-column
-          [property]="'name'"
-          [header]="'Message Site ID'"
-          [sortable]="true"
-          [resizable]="true">
-      </data-table-column>    
-      <data-table-column
-          [property]="'date'"
-          [header]="'Last Uploded Date'"
-          [sortable]="true">
-          <ng-template #dataTableCell let-item="item">
-              <span>{{item.date | date:'yyyy-MM-dd'}}</span>
-          </ng-template>
-      </data-table-column>
-
-      <data-table-column
-          property="phoneNumber"
-          header="Phone number"
-          [visible]="false">
-          > 
-          
-      </data-table-column>
-      <data-table-column
-          [property]="'jobTitle'"
-          [header]="'Job title'"
-          [visible]="false">
-      </data-table-column>
-
-
-  </data-table>
-</div>
-
--->
-
-
-
-<!-- 
-<div style=" background-color: white;">
-
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th style="text-align: center">Message Site ID</th>
-                <th style="text-align: center">Last Uploded Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0111</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0113</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0118</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0120</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0122</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
+<div class="example-container">
+    <mat-table [dataSource]="dataSource">
+  
+  
+      <ng-container matColumnDef="SITEID" >
+        <mat-header-cell *matHeaderCellDef > Site ID </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.SITEID}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="LASTMSGDATE">
+        <mat-header-cell *matHeaderCellDef>Last Message Date </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.LASTMSGDATE}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+  </div>

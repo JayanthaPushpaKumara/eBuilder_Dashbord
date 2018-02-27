@@ -13,7 +13,7 @@ export class FrameComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.getData();
+     // this.getData();
   }
 
   public getData(): void {
