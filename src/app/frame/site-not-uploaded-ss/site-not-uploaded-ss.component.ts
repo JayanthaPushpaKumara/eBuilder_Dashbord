@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { DataTableResource } from 'angular5-data-table';
-import persons from './data-table-demo4-data';
+import { UserService } from '../services/user.service'
+import { Observable } from 'rxjs/Observable';
+import { DataSource } from '@angular/cdk/collections';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-site-not-uploaded-ss',
@@ -10,27 +12,21 @@ import persons from './data-table-demo4-data';
 
 export class SiteNotUploadedSsComponent {
 
-    itemResource = new DataTableResource(persons);
-    items = [];
-    itemCount = 0;
+    displayedColumns = ['SITEID', 'LASTMSGDATE']
+    dataSource = new UserDataSource(this.userService);
 
-    constructor() {
-        this.itemResource.count().then(count => this.itemCount = count);
-    }
-
-    reloadItems(params) {
-        this.itemResource.query(params).then(items => this.items = items);
-    }
-
-    // special properties:
-
-    rowClick(rowEvent) {
-        console.log('Clicked: ' + rowEvent.row.item.name);
-    }
-
-    rowDoubleClick(rowEvent) {
-        alert('Double clicked: ' + rowEvent.row.item.name);
-    }
-
-    //rowTooltip(item) { return item.jobTitle; }
+    constructor(private userService: UserService) { }
+ 
 }
+
+export class UserDataSource extends DataSource<any>{
+    constructor(private userService: UserService) {
+      super();
+    }
+  
+    connect(): Observable<User[]> {
+      return this.userService.getUser();
+    }
+  
+    disconnect() { }
+  }

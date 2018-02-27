@@ -12,13 +12,14 @@ export class WipComponent implements OnInit {
 
   ngOnInit() {
     this.getData();
+    this.getDateRange();
   }
 
   public getData(): void {
     this.http.get('http://localhost:3000/api/wip').subscribe(
       data => {
-        console.log(data);
-        this.lineChartData = data;
+        console.log(data[1]);
+        this.lineChartData = data[1];
       },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
@@ -30,12 +31,28 @@ export class WipComponent implements OnInit {
     );
   }
 
-  public lineChartData: any = [{ },{ },{ }];
+  public getDateRange():void{
+    this.http.get('http://localhost:3000/api/wip').subscribe(
+      data => {
+         console.log(data[0].dateRange);
+         this.lineChartLabels=data[0].dateRange;
+      },
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+            console.log("Client side Error occured")
+        } else {
+            console.log("Server side Eror occured")
+        }
+    }
+    );
+  }
+
+  public lineChartData: any = [{},{},{}];
 
 
   public lineChartType: string = 'line';
 
-  public lineChartLabels: Array<any> = ["2018-01-22","2018-01-23","2018-01-24","2018-01-25","2018-01-26"];
+  public lineChartLabels: Array<any> = [];
   public lineChartOptions: any = {
     responsive: true,
     scales: {
@@ -96,8 +113,6 @@ export class WipComponent implements OnInit {
 
   public lineChartLegend: boolean = true;
 
-
-
   // events
   public chartClicked(e: any): void {
     console.log(e);
@@ -106,7 +121,4 @@ export class WipComponent implements OnInit {
   public chartHovered(e: any): void {
     console.log(e);
   }
-
-
-
 }

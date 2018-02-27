@@ -10,9 +10,35 @@
     
 }
 
+<<<<<<< HEAD
 #content{
 padding-top: 5px;
 padding-bottom: 5px;
    
 
+=======
+.panel-heading {
+    color: white;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    /* min-width: 300px; */
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 280px;
+    /* max-width: 300px; */
+}
+
+.mat-row {
+    min-height: 30px;
+    font: .8em sans-serif;
+}
+
+.mat-header-row {
+    background-color: rgba(118, 246, 255, 0.863);
+>>>>>>> master
 }

@@ -14,6 +14,10 @@ export class MessageFailureCrComponent implements OnInit {
 
     //this.createChart();
     this.getData();
+<<<<<<< HEAD
+=======
+    this.getDateRange();
+>>>>>>> master
 
   }
 
@@ -23,8 +27,13 @@ export class MessageFailureCrComponent implements OnInit {
     this.http.get('http://localhost:3000/api/Msg_F_Acc_CR').subscribe(
 
       data => {
+<<<<<<< HEAD
         console.log(data);
         this.lineChartData = data;
+=======
+        console.log(data[1]);
+        this.lineChartData = data[1];
+>>>>>>> master
       },
 
       (err: HttpErrorResponse) => {
@@ -35,6 +44,25 @@ export class MessageFailureCrComponent implements OnInit {
         }
       }
     );
+<<<<<<< HEAD
+=======
+  }
+
+  public getDateRange():void{
+    this.http.get('http://localhost:3000/api/Msg_F_Acc_CR').subscribe(
+      data => {
+         console.log(data[0].dateRange);
+         this.lineChartLabels=data[0].dateRange;
+      },
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+            console.log("Client side Error occured")
+        } else {
+            console.log("Server side Eror occured")
+        }
+    }
+    );
+>>>>>>> master
   }
 
 
@@ -43,7 +71,11 @@ export class MessageFailureCrComponent implements OnInit {
 
   public lineChartType: string = 'line';
 
+<<<<<<< HEAD
   public lineChartLabels: Array<any> = ["2018-01-16", "2018-01-17", "2018-01-18", "2018-01-19", "2018-01-20"];
+=======
+  public lineChartLabels: Array<any> = [];
+>>>>>>> master
   public lineChartOptions: any = {
     responsive: true,
     scales: {

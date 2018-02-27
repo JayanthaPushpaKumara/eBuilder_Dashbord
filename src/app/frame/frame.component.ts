@@ -13,7 +13,11 @@ export class FrameComponent implements OnInit {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
       this.getData();
+=======
+     // this.getData();
+>>>>>>> master
   }
 
   public getData(): void {

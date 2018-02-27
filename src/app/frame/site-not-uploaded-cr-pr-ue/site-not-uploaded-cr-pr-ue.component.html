@@ -4,43 +4,34 @@
     </div>
     <div class="card-block" id="content" >
     </div>
+<<<<<<< HEAD
 <!-- 
 <div style=" background-color: white;">
+=======
+</div>
+>>>>>>> master
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th style="text-align: center">Message Site ID</th>
-                <th style="text-align: center">Message Type</th>
-                <th style="text-align: center">Last Uploded Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0001254789</td>
-                <td>Create Return</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0001256358</td>
-                <td>Process Return</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0001465236</td>
-                <td>Update Event</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>01256398754</td>
-                <td>Create Return</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>0123654789</td>
-                <td>Process Return</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
+ <div class="example-container">
+    <mat-table [dataSource]="dataSource">
+  
+  
+      <ng-container matColumnDef="SITEID">
+        <mat-header-cell *matHeaderCellDef >Message Site ID</mat-header-cell>
+        <mat-cell *matCellDef="let siteNotUplodedCrPrUe"> {{siteNotUplodedCrPrUe.SITEID}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="MSESAGETYPE">
+        <mat-header-cell *matHeaderCellDef>Message Type</mat-header-cell>
+        <mat-cell *matCellDef="let siteNotUplodedCrPrUe"> {{siteNotUplodedCrPrUe.MSESAGETYPE}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="LASTMSGDATE">
+        <mat-header-cell *matHeaderCellDef>Last Message Date</mat-header-cell>
+        <mat-cell *matCellDef="let siteNotUplodedCrPrUe"> {{siteNotUplodedCrPrUe.LASTMSGDATE}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+  </div>

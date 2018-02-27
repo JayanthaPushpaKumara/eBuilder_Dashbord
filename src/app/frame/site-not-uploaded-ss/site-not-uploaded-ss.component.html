@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="card" id="cardid">
   <div class="card-header" id="dashhead">
     <b>Site Not Uploaded SS</b>
@@ -93,3 +94,28 @@
     </table>
 </div> -->
 </div>
+=======
+<div class="panel" id="panelhead" >
+    <div class="panel-heading" id="dashhead"><b>Site Not Uploaded SS</b></div>
+</div>
+
+<div class="example-container">
+    <mat-table [dataSource]="dataSource">
+  
+  
+      <ng-container matColumnDef="SITEID" >
+        <mat-header-cell *matHeaderCellDef > Site ID </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.SITEID}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="LASTMSGDATE">
+        <mat-header-cell *matHeaderCellDef>Last Message Date </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.LASTMSGDATE}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+  </div>
+>>>>>>> master
